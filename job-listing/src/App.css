@@ -27,7 +27,7 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--neutral-light-grayish-cyan-bg);
 
 }
@@ -37,10 +37,12 @@ header img {
     flex-wrap: wrap;
     background-color: white;
     align-items: center;
-    justify-content: space-between;
     padding: 10px;
     width: 90vh;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    gap: 5px;
 
 }
 
@@ -71,10 +73,9 @@ header img {
 
 }
 .job-listing{
-    margin-top: 1%;
-    display: flex;
-    flex-direction: column;
-}
+     margin-top: 1%;
+     flex-direction: column;
+ }
 .job-card {
     display: flex;
     flex-direction: row;
@@ -125,12 +126,14 @@ header img {
     font-weight: bold;
     font-size: 10px;
 }
-
+.etiquette-featured{
+    background-color: black;
+}
 .job-info {
     display: flex;
     align-items: center;
     color: rgb(128, 128, 128);
-    gap: 10px;
+    gap: 5px;
 }
 
 .right-content {
@@ -138,4 +141,7 @@ header img {
     justify-content: flex-end;
     gap: 5px;
 
+}
+.job-card:hover {
+    border-left: 5px solid var(--primary-desaturated-dark-cyan);
 }
