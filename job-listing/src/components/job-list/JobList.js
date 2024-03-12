@@ -1,11 +1,11 @@
 import {JobCard} from "./JobCard";
 
-export function JobList({ jobs, addFilter, activeFilters }) {
-    const jobMatchesFilters = (job) => {
+export function JobList({ jobs, addTag, activeTags }) {
+    const isContainActiveTag = (job) => {
         const jobTags = [job.role, job.level, ...job.languages, ...job.tools];
 
-        for (let filter of activeFilters) {
-            if (!jobTags.includes(filter)) {
+        for (let tag of activeTags) {
+            if (!jobTags.includes(tag)) {
                 return false;
             }
 
@@ -13,12 +13,12 @@ export function JobList({ jobs, addFilter, activeFilters }) {
         return true;
     };
 
-    const filteredJobs = jobs.filter(jobMatchesFilters);
+    const filteredJobs = jobs.filter(isContainActiveTag);
 
     return (
         <div className="job-listing">
             {filteredJobs.map(job => (
-                <JobCard key={job.id} job={job} onTagClick={addFilter} />
+                <JobCard key={job.id} job={job} onTagClick={addTag} />
             ))}
         </div>
     );
