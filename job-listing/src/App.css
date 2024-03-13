@@ -54,7 +54,6 @@ header img {
 }
 
 .job-tag{
-    display: inline-flex;
     background-color: var(--neutral-light-grayish-cyan-bg);
     color: var(--primary-desaturated-dark-cyan);
     padding: 10px ;
@@ -138,6 +137,7 @@ header img {
 
 .right-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     gap: 5px;
 
@@ -145,3 +145,4 @@ header img {
 .job-card:hover {
     border-left: 5px solid var(--primary-desaturated-dark-cyan);
 }
+

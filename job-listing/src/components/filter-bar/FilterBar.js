@@ -1,4 +1,5 @@
 export function FilterBar({ tags, removeTags, clearTags }) {
+
     return (
         <div className="filter-container">
             {tags.map((tag, index) => (

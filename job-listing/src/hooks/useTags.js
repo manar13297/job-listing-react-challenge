@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
 export const useTags = () => {
+
     const [activeTags, setActiveTags] = useState([]);
 
     const addTag = (tag) => {

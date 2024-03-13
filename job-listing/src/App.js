@@ -4,7 +4,8 @@ import {JobList} from "./components/job-list/JobList";
 import {FilterBar} from "./components/filter-bar/FilterBar";
 import {useTags} from "./hooks/useTags";
 function App() {
-  const { activeTags, addTag, removeTag, clearTags } = useTags();
+
+    const { activeTags, addTag, removeTag, clearTags } = useTags();
 
   return (
     <>
