@@ -1,0 +1,28 @@
+.filter-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    align-items: center;
+    padding: 10px;
+    width: 60vw;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    gap: 5px;
+
+}
+/*Clear span*/
+.filter-container > span{
+    background-color: transparent;
+    border: none;
+    color: var(--primary-desaturated-dark-cyan);
+    cursor: pointer;
+    position: absolute;
+    right: 1%;
+}
+
+.job-tag span{
+    margin-left: 8px;
+    cursor: pointer;
+    color: black;
+}

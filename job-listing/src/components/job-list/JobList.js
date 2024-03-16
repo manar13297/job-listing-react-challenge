@@ -1,5 +1,5 @@
-import {JobCard} from "./JobCard";
-
+import {JobCard} from "./job-card/JobCard";
+import './JobList.css'
 export function JobList({ jobs, addTag, activeTags }) {
     const isContainActiveTag = (job) => {
         const jobTags = [job.role, job.level, ...job.languages, ...job.tools];

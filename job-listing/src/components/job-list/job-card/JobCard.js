@@ -1,3 +1,4 @@
+import './JobCard.css'
 export function JobCard({ job , onTagClick}) {
     return (
         <div className="job-card">
@@ -11,18 +12,20 @@ export function JobCard({ job , onTagClick}) {
                         {job.featured && <span className="etiquette etiquette-featured">FEATURED</span>}
                     </div>
                     <div className="position">{job.position}</div>
-                    <div className="job-info">
-                        <div>{job.postedAt}</div> &middot;
-                        <div>{job.contract}</div>&middot;
-                        <div>{job.location}</div>
+                    <div >
+                        <span className="job-info">{job.postedAt}</span>
+                        <span className="job-info"> &middot;</span>
+                        <span className="job-info">{job.contract}</span>
+                        <span className="job-info">&middot;</span>
+                        <span className="job-info">{job.location}</span>
                     </div>
                 </div>
             </div>
             <hr className="mobile-only"/>
 
             <div className="right-content">
-                {[job.role, job.level,...job.languages, ...job.tools].map((tag,index) => (
-                    <div key={index} className="job-tag" onClick={() => onTagClick(tag)}>{tag}</div>
+                {[job.role, job.level,...job.languages, ...job.tools].map((tag) => (
+                    <span key={job.id} className="job-tag" onClick={() => onTagClick(tag)}>{tag}</span>
                 ))}
             </div>
         </div>
